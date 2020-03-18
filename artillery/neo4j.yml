@@ -1,0 +1,26 @@
+  config:
+    target: "http://35.202.130.217:7474"
+    phases:
+      - duration: 2
+        arrivalRate: 5
+    # ws:
+    #   rejectUnauthorized: false
+      # headers:
+      #   Sec-WebSocket-Key: "reiyJsH4YFF/Sb517W5ZzA=="
+  scenarios:
+    - engine: "http"
+      flow:
+        - send: "MATCH (n) RETURN n LIMIT 10"
+        - think: 1
+        - send: "MATCH (n) RETURN n LIMIT 10"
+      url: ""
+
+config:
+  target: "http://35.202.130.217:7474"
+  phases:
+    - duration: 2
+      arrivalRate: 5
+scenarios:
+  - flow:
+      - get:
+          url: "/"

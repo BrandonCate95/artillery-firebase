@@ -1,0 +1,13 @@
+config:
+  target: 'https://us-central1-testthree-e34c0.cloudfunctions.net'
+  phases:
+    - duration: 5
+      arrivalRate: 3
+  # defaults:
+  #   headers:
+  #     x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - post:
+        url: "/api/graphql"
+        body: "{tweets{text}}"

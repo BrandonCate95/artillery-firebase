@@ -1,0 +1,10 @@
+{
+    "name": "functions",
+    "description": "Cloud Functions for Firebase",
+    "scripts": {
+      "graphql:schema": "artillery run artillery/graphql.yml",
+      "firestore:simple": "artillery run artillery/rest.yml",
+      "neo4j:simple": "artillery run artillery/neo4j.yml"
+    },
+    "private": true
+}

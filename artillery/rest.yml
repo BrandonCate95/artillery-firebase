@@ -1,0 +1,12 @@
+config:
+  target: 'https://firestore.googleapis.com'
+  phases:
+    - duration: 5
+      arrivalRate: 3
+  # defaults:
+  #   headers:
+  #     x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - get:
+        url: "/v1/projects/testthree-e34c0/databases/(default)/documents/Tweets/zlDv60IwwJWiHeq8r6CP"
